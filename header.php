@@ -9,16 +9,27 @@
     <div id="page" class="site">
         <header>
             <section class="top-bar">
-                <div class="logo">
-                    Logo
-                </div>
-                <div class="searchbox">
-                    Search
+                <div class="container">
+                    <div class="logo">
+                        Logo
+                    </div>
+                    <div class="searchbox">
+                        Search
+                    </div>
                 </div>
             </section>
             <section class="menu-area">
-                <nav class="main-menu">
-                    Menu
-                </nav>
+                <div class="container">
+                    <nav class="main-menu">
+                        <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location'        => 'wordev_main_menu',
+                                    'depth'                 => 2
+                                )
+                            );
+                        ?>
+                    </nav>
+                </div>
             </section>
         </header>
