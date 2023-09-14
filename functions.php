@@ -6,3 +6,10 @@ function get_enqueue() {
     wp_enqueue_script('dropdown', get_template_directory_uri() . '/assets/js/dropdown.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'get_enqueue');
+
+register_nav_menus(
+    array(
+        'wordev_main_menu'          => 'Main Menu',
+        'wordev_footer_menu'        => 'Footer Menu'
+    )
+);
