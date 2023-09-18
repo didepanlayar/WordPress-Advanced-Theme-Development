@@ -7,9 +7,12 @@ function get_enqueue() {
 }
 add_action('wp_enqueue_scripts', 'get_enqueue');
 
-register_nav_menus(
-    array(
-        'wordev_main_menu'          => 'Main Menu',
-        'wordev_footer_menu'        => 'Footer Menu'
-    )
-);
+function wordev_config() {
+    register_nav_menus(
+        array(
+            'wordev_main_menu'          => 'Main Menu',
+            'wordev_footer_menu'        => 'Footer Menu'
+        )
+    );
+}
+add_action('after_setup_theme', 'wordev_config', 0);
