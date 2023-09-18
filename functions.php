@@ -14,5 +14,11 @@ function wordev_config() {
             'wordev_footer_menu'        => 'Footer Menu'
         )
     );
+
+    $args = array(
+        'height'    => 225,
+        'width'     => 1920
+    );
+    add_theme_support('custom-header', $args);
 }
 add_action('after_setup_theme', 'wordev_config', 0);
