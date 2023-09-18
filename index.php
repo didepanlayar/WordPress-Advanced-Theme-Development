@@ -10,6 +10,7 @@
                             <?php if(have_posts()) : ?>
                                 <?php while(have_posts()) : the_post(); ?>
                                     <article>
+                                        <?php the_post_thumbnail(array(300, 300)); ?>
                                         <h2><?php the_title(); ?></h2>
                                         <div class="meta-info">
                                             <p>Posted on <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
