@@ -24,6 +24,7 @@
                                 <p>No content available.</p>
                             <?php endif; ?>
                         </div>
+                        <?php get_sidebar(); ?>
                     </div>
                 </main>
             </div>

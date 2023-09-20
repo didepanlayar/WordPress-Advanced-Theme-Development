@@ -29,3 +29,18 @@ function wordev_config() {
     ));
 }
 add_action('after_setup_theme', 'wordev_config', 0);
+
+function wordev_sidebars() {
+    register_sidebar(
+        array(
+            'id'                => 'sidebar-blog',
+            'name'              => 'Blog Sidebar',
+            'description'       => 'This is the Blog Sidebar. You can add yout widgets here.',
+            'before_widget'     => '<div class="widget-wrapper">',
+            'after_widget'      => '</div>',
+            'before_title'      => '<h4 class="widget-title">',
+            'afetr_title'       => '</4>'
+        )
+    );
+}
+add_action('widgets_init', 'wordev_sidebars');
