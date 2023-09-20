@@ -42,5 +42,38 @@ function wordev_sidebars() {
             'afetr_title'       => '</4>'
         )
     );
+    register_sidebar(
+        array(
+            'id'                => 'services-1',
+            'name'              => 'Service 1',
+            'description'       => 'First Service Area.',
+            'before_widget'     => '<div class="widget-wrapper">',
+            'after_widget'      => '</div>',
+            'before_title'      => '<h4 class="widget-title">',
+            'afetr_title'       => '</4>'
+        )
+    );
+    register_sidebar(
+        array(
+            'id'                => 'services-2',
+            'name'              => 'Service 2',
+            'description'       => 'Second Service Area.',
+            'before_widget'     => '<div class="widget-wrapper">',
+            'after_widget'      => '</div>',
+            'before_title'      => '<h4 class="widget-title">',
+            'afetr_title'       => '</4>'
+        )
+    );
+    register_sidebar(
+        array(
+            'id'                => 'services-3',
+            'name'              => 'Service 3',
+            'description'       => 'Third Service Area.',
+            'before_widget'     => '<div class="widget-wrapper">',
+            'after_widget'      => '</div>',
+            'before_title'      => '<h4 class="widget-title">',
+            'afetr_title'       => '</4>'
+        )
+    );
 }
 add_action('widgets_init', 'wordev_sidebars');
