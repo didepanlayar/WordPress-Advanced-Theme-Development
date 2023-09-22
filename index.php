@@ -20,6 +20,14 @@
                                         <?php the_excerpt(); ?>
                                     </article>
                                 <?php endwhile; ?>
+                                    <div class="wpdevs-pagination">
+                                        <div class="pages new">
+                                            <?php previous_posts_link('<< Newer Posts'); ?>
+                                        </div>
+                                        <div class="pages old">
+                                            <?php next_posts_link('Older Posts >>'); ?>
+                                        </div>
+                                    </div>
                             <?php else : ?>
                                 <p>No content available.</p>
                             <?php endif; ?>
