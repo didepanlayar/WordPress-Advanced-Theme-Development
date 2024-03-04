@@ -1,6 +1,6 @@
 <article class="latest-news">
     <?php if(has_post_thumbnail()) : ?>
-        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
     <?php endif; ?>
     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     <div class="meta-info">
