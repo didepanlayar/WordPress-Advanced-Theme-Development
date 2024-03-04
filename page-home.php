@@ -39,7 +39,9 @@
                                 $args = array(
                                     'post_type'         => 'post',
                                     // Get Category ID: Design, Development and Network
-                                    'category__in'      => array(5, 10, 14),
+                                    // 'category__in'      => array(4, 5, 6),
+                                    // Get Category Slug: Design, Development and Network
+                                    'category_name'     => array('design','development','network'),
                                     // Get Category ID: Uncategorized
                                     'category__not_in'  => array(1),
                                     'posts_per_page'    => 3
