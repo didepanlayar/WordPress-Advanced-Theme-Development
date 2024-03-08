@@ -155,6 +155,71 @@ function wordev_customizer($wp_customize) {
             'mime_type' => 'image'
         ))
     );
+
+    // 3 Blog
+	$wp_customize->add_section( 
+        'sec_blog', 
+        array(
+		    'title' => 'News Settings'
+        )
+    );
+    
+    // 3.1 Posts Per Page
+    $wp_customize->add_setting( 
+        'set_per_page',
+        array(
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    $wp_customize->add_control( 
+        'set_per_page', 
+        array(
+            'label' => 'Number of Posts',
+            'description' => 'Number of posts to be displayed.',			
+            'section' => 'sec_blog',
+            'type' => 'number'
+        )
+    );
+
+    // 3.2 Post Categories to Include
+    $wp_customize->add_setting( 
+        'set_category_include', 
+        array(
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control( 
+        'set_category_include', 
+        array(
+            'label' => 'Categories Included',
+            'description' => 'Included category IDs, separated by commas.',
+            'section' => 'sec_blog',
+            'type' => 'text'
+        )
+    );
+
+    // 3.3 Post Categories to Exclude
+    $wp_customize->add_setting( 
+        'set_category_exclude', 
+        array(
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field'
+        )
+    );
+
+    $wp_customize->add_control( 
+        'set_category_exclude', 
+        array(
+            'label' => 'Categories Excluded',
+            'description' => 'Excluded category IDs, separated by commas.',			
+            'section' => 'sec_blog',
+            'type' => 'text'
+        )
+    );
 }
 
 add_action('customize_register', 'wordev_customizer');

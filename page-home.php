@@ -52,15 +52,19 @@
                         <h2>Latest News</h2>
                         <div class="container">
                             <?php
+                                $post_per_page    = get_theme_mod('set_per_page', 3);
+                                $category_include = get_theme_mod('set_category_include');
+                                $category_exclude = get_theme_mod('set_category_exclude');
+
                                 $args = array(
                                     'post_type'         => 'post',
                                     // Get Category ID: Design, Development and Network
-                                    // 'category__in'      => array(4, 5, 6),
+                                    'category__in'      => explode(',', $category_include),
                                     // Get Category Slug: Design, Development and Network
-                                    'category_name'     => array('design','development','network'),
+                                    // 'category_name'     => array('design','development','network'),
                                     // Get Category ID: Uncategorized
-                                    'category__not_in'  => array(1),
-                                    'posts_per_page'    => 3
+                                    'category__not_in'  => explode(',', $category_exclude),
+                                    'posts_per_page'    => $post_per_page
                                 );
                                 $postlist = new WP_Query($args);
                                 if($postlist->have_posts()) : ?>
