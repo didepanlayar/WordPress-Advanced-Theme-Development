@@ -3,13 +3,21 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <section class="hero" style="background-image: url('wp-content/uploads/2024/03/Home-Hero-00.jpg')">
-                        <div class="overlay" style="min-height: 800px">
+                    <?php
+                        $hero_backround     = wp_get_attachment_url(get_theme_mod('set_hero_background'));
+                        $hero_height        = get_theme_mod('set_hero_height', 800);
+                        $hero_title         = get_theme_mod('set_hero_title', 'Please, type some title');
+                        $hero_subtitle      = get_theme_mod('set_hero_subtitle', 'Please, type some subtitle.');
+                        $hero_button_text   = get_theme_mod('set_hero_button_text', 'Learn More');
+                        $hero_button_link   = get_theme_mod('set_hero_button_link', '#');
+                    ?>
+                    <section class="hero" style="background-image: url('<?php echo $hero_backround; ?>')">
+                        <div class="overlay" style="min-height: <?php echo $hero_height; ?>px">
                             <div class="container">
                                 <div class="hero-items">
-                                    <h1>Lorem ipsum dolor</h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolore nam unde voluptas hic quo incidunt.</p>
-                                    <a href="#">Learn More</a>
+                                    <h1><?php echo $hero_title; ?></h1>
+                                    <p><?php echo nl2br($hero_subtitle); ?></p>
+                                    <a href="<?php echo $hero_button_link; ?>"><?php echo $hero_button_text; ?></a>
                                 </div>
                             </div>
                         </div>
