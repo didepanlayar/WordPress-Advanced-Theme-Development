@@ -5,8 +5,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_section(
         'sec_copyright',
         array(
-            'title'         => 'Copyright Settings',
-            'description'   => 'Copyright Settings'
+            'title'         => __('Copyright Settings', 'wordev'),
+            'description'   => __('Copyright Settings', 'wordev')
         )
     );
 
@@ -14,7 +14,7 @@ function wordev_customizer($wp_customize) {
         'set_copyright',
         array(
             'type'                  => 'theme_mod',
-            'default'               => 'Copyright &copy; - All Rights Reversed',
+            'default'               => __('Copyright &copy; - All Rights Reversed', 'wordev'),
             'sanitize_callback'     => 'sanitize_text_field'
         )
     );
@@ -22,8 +22,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control(
         'set_copyright',
         array(
-            'label'         => 'Copyright Information',
-            'description'   => 'Please, type your copyright here.',
+            'label'         => __('Copyright Information', 'wordev'),
+            'description'   => __('Please, type your copyright here.', 'wordev'),
             'section'       => 'sec_copyright',
             'type'          => 'text'
         )
@@ -33,7 +33,7 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_section(
         'sec_hero',
         array(
-            'title'         => 'Hero Settings'
+            'title'         => __('Hero Settings', 'wordev')
         )
     );
 
@@ -42,7 +42,7 @@ function wordev_customizer($wp_customize) {
         'set_hero_title',
         array(
             'type'                  => 'theme_mod',
-            'default'               => 'Please, add some title',
+            'default'               => __('Please, add some title', 'wordev'),
             'sanitize_callback'     => 'sanitize_text_field'
         )
     );
@@ -50,8 +50,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control(
         'set_hero_title',
         array(
-            'label'         => 'Hero Title',
-            'description'   => 'Please, type your hero title here.',
+            'label'         => __('Hero Title', 'wordev'),
+            'description'   => __('Please, type your hero title here.', 'wordev'),
             'section'       => 'sec_hero',
             'type'          => 'text'
         )
@@ -62,7 +62,7 @@ function wordev_customizer($wp_customize) {
         'set_hero_subtitle',
         array(
             'type'                  => 'theme_mod',
-            'default'               => 'Please, add some subtitle',
+            'default'               => __('Please, add some subtitle', 'wordev'),
             'sanitize_callback'     => 'sanitize_textarea_field'
         )
     );
@@ -70,8 +70,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control(
         'set_hero_subtitle',
         array(
-            'label'         => 'Hero Subtitle',
-            'description'   => 'Please, type your hero subtitle here.',
+            'label'         => __('Hero Subtitle', 'wordev'),
+            'description'   => __('Please, type your hero subtitle here.', 'wordev'),
             'section'       => 'sec_hero',
             'type'          => 'textarea'
         )
@@ -82,7 +82,7 @@ function wordev_customizer($wp_customize) {
         'set_hero_button_text',
         array(
             'type'                  => 'theme_mod',
-            'default'               => 'Learn More',
+            'default'               => __('Learn More', 'wordev'),
             'sanitize_callback'     => 'sanitize_text_field'
         )
     );
@@ -90,8 +90,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control(
         'set_hero_button_text',
         array(
-            'label'         => 'Hero Button Text',
-            'description'   => 'Please, type your hero button text here.',
+            'label'         => __('Hero Button Text', 'wordev'),
+            'description'   => __('Please, type your hero button text here.', 'wordev'),
             'section'       => 'sec_hero',
             'type'          => 'textarea'
         )
@@ -110,8 +110,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control(
         'set_hero_button_link',
         array(
-            'label'         => 'Hero Button Link',
-            'description'   => 'Please, type your hero button link here.',
+            'label'         => __('Hero Button Link', 'wordev'),
+            'description'   => __('Please, type your hero button link here.', 'wordev'),
             'section'       => 'sec_hero',
             'type'          => 'url'
         )
@@ -130,8 +130,8 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control(
         'set_hero_height',
         array(
-            'label'         => 'Hero Height',
-            'description'   => 'Please, type your hero height here.',
+            'label'         => __('Hero Height', 'wordev'),
+            'description'   => __('Please, type your hero height here.', 'wordev'),
             'section'       => 'sec_hero',
             'type'          => 'number'
         )
@@ -150,7 +150,7 @@ function wordev_customizer($wp_customize) {
         $wp_customize,
         'set_hero_background',
         array(
-            'label'     => 'Hero Image',
+            'label'     => __('Hero Image', 'wordev'),
             'section'   => 'sec_hero',
             'mime_type' => 'image'
         ))
@@ -160,7 +160,7 @@ function wordev_customizer($wp_customize) {
 	$wp_customize->add_section( 
         'sec_blog', 
         array(
-		    'title' => 'News Settings'
+		    'title' => __('News Settings', 'wordev')
         )
     );
     
@@ -168,7 +168,7 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_setting( 
         'set_per_page',
         array(
-            'type' => 'theme_mod',
+            'type'              => 'theme_mod',
             'sanitize_callback' => 'absint'
         )
     );
@@ -176,10 +176,10 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control( 
         'set_per_page', 
         array(
-            'label' => 'Number of Posts',
-            'description' => 'Number of posts to be displayed.',			
-            'section' => 'sec_blog',
-            'type' => 'number'
+            'label'         => __('Number of Posts', 'wordev'),
+            'description'   => __('Number of posts to be displayed.', 'wordev'),
+            'section'       => 'sec_blog',
+            'type'          => 'number'
         )
     );
 
@@ -187,7 +187,7 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_setting( 
         'set_category_include', 
         array(
-            'type' => 'theme_mod',
+            'type'              => 'theme_mod',
             'sanitize_callback' => 'sanitize_text_field'
         )
     );
@@ -195,10 +195,10 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control( 
         'set_category_include', 
         array(
-            'label' => 'Categories Included',
-            'description' => 'Included category IDs, separated by commas.',
-            'section' => 'sec_blog',
-            'type' => 'text'
+            'label'         => __('Categories Included', 'wordev'),
+            'description'   => __('Included category IDs, separated by commas.', 'wordev'),
+            'section'       => 'sec_blog',
+            'type'          => 'text'
         )
     );
 
@@ -206,7 +206,7 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_setting( 
         'set_category_exclude', 
         array(
-            'type' => 'theme_mod',
+            'type'              => 'theme_mod',
             'sanitize_callback' => 'sanitize_text_field'
         )
     );
@@ -214,10 +214,10 @@ function wordev_customizer($wp_customize) {
     $wp_customize->add_control( 
         'set_category_exclude', 
         array(
-            'label' => 'Categories Excluded',
-            'description' => 'Excluded category IDs, separated by commas.',			
-            'section' => 'sec_blog',
-            'type' => 'text'
+            'label'         => __('Categories Excluded', 'wordev'),
+            'description'   => __('Excluded category IDs, separated by commas.', 'wordev'),
+            'section'       => 'sec_blog',
+            'type'          => 'text'
         )
     );
 }
