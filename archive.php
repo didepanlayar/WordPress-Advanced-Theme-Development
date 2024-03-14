@@ -14,7 +14,7 @@
                                 <?php endwhile; ?>
                                     <?php the_posts_pagination(); ?>
                             <?php else : ?>
-                                <p>No content available.</p>
+                                <p><?php _e('No content available.', 'wordev'); ?></p>
                             <?php endif; ?>
                         </div>
                         <?php get_sidebar(); ?>

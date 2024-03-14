@@ -2,7 +2,7 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="copyright">
-                    <p><?php echo get_theme_mod('set_copyright', 'Copyright &copy; - All Rights Reversed'); ?></p>
+                    <p><?php echo get_theme_mod('set_copyright', __('Copyright &copy; - All Rights Reversed', 'wordev')); ?></p>
                 </div>
                 <div class="footer-menu">
                     <?php

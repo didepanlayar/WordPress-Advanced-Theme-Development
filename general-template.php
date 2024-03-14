@@ -18,7 +18,8 @@ Template Name: General Template
                                         <h1><?php the_title(); ?></h1>
                                         <?php the_content(); ?>
                                     </article>
-                                <?php endwhile; ?>
+                                <?php endwhile; else:?>
+                                    <p><?php _e('No content available.', 'wordev'); ?></p>
                             <?php endif; ?>
                         </div>
                     </div>
