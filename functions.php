@@ -10,6 +10,10 @@ function get_enqueue() {
 add_action('wp_enqueue_scripts', 'get_enqueue');
 
 function wordev_config() {
+
+    $textdomain = 'wordev';
+    load_theme_textdomain($textdomain, get_template_directory() . '/languages/');
+
     register_nav_menus(
         array(
             'wordev_main_menu'          => 'Main Menu',
