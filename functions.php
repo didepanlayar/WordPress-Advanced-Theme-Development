@@ -16,8 +16,8 @@ function wordev_config() {
 
     register_nav_menus(
         array(
-            'wordev_main_menu'          => __('Main Menu', 'wordev'),
-            'wordev_footer_menu'        => __('Footer Menu', 'wordev')
+            'wordev_main_menu'          => esc_html__('Main Menu', 'wordev'),
+            'wordev_footer_menu'        => esc_html__('Footer Menu', 'wordev')
         )
     );
 
@@ -51,8 +51,8 @@ function wordev_sidebars() {
     register_sidebar(
         array(
             'id'                => 'sidebar-blog',
-            'name'              => __('Blog Sidebar', 'wordev'),
-            'description'       => __('This is the Blog Sidebar. You can add yout widgets here.', 'wordev'),
+            'name'              => esc_html__('Blog Sidebar', 'wordev'),
+            'description'       => esc_html__('This is the Blog Sidebar. You can add yout widgets here.', 'wordev'),
             'before_widget'     => '<div class="widget-wrapper">',
             'after_widget'      => '</div>',
             'before_title'      => '<h4 class="widget-title">',
@@ -62,8 +62,8 @@ function wordev_sidebars() {
     register_sidebar(
         array(
             'id'                => 'services-1',
-            'name'              => __('Service 1', 'wordev'),
-            'description'       => __('First Service Area.', 'wordev'),
+            'name'              => esc_html__('Service 1', 'wordev'),
+            'description'       => esc_html__('First Service Area.', 'wordev'),
             'before_widget'     => '<div class="widget-wrapper">',
             'after_widget'      => '</div>',
             'before_title'      => '<h4 class="widget-title">',
@@ -73,8 +73,8 @@ function wordev_sidebars() {
     register_sidebar(
         array(
             'id'                => 'services-2',
-            'name'              => __('Service 2', 'wordev'),
-            'description'       => __('Second Service Area.', 'wordev'),
+            'name'              => esc_html__('Service 2', 'wordev'),
+            'description'       => esc_html__('Second Service Area.', 'wordev'),
             'before_widget'     => '<div class="widget-wrapper">',
             'after_widget'      => '</div>',
             'before_title'      => '<h4 class="widget-title">',
@@ -84,8 +84,8 @@ function wordev_sidebars() {
     register_sidebar(
         array(
             'id'                => 'services-3',
-            'name'              => __('Service 3', 'wordev'),
-            'description'       => __('Third Service Area.', 'wordev'),
+            'name'              => esc_html__('Service 3', 'wordev'),
+            'description'       => esc_html__('Third Service Area.', 'wordev'),
             'before_widget'     => '<div class="widget-wrapper">',
             'after_widget'      => '</div>',
             'before_title'      => '<h4 class="widget-title">',

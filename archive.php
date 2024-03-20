@@ -1,6 +1,6 @@
 <?php get_header(); ?>
         <!--  -->
-        <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+        <img src="<?php header_image(); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="">
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
@@ -14,7 +14,7 @@
                                 <?php endwhile; ?>
                                     <?php the_posts_pagination(); ?>
                             <?php else : ?>
-                                <p><?php _e('No content available.', 'wordev'); ?></p>
+                                <p><?php esc_html_e('No content available.', 'wordev'); ?></p>
                             <?php endif; ?>
                         </div>
                         <?php get_sidebar(); ?>

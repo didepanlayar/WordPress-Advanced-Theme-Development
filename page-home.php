@@ -11,19 +11,19 @@
                         $hero_button_text   = get_theme_mod('set_hero_button_text', __('Learn More', 'wordev'));
                         $hero_button_link   = get_theme_mod('set_hero_button_link', '#');
                     ?>
-                    <section class="hero" style="background-image: url('<?php echo $hero_backround; ?>')">
-                        <div class="overlay" style="min-height: <?php echo $hero_height; ?>px">
+                    <section class="hero" style="background-image: url('<?php echo esc_url($hero_backround); ?>')">
+                        <div class="overlay" style="min-height: <?php echo esc_attr($hero_height); ?>px">
                             <div class="container">
                                 <div class="hero-items">
-                                    <h1><?php echo $hero_title; ?></h1>
-                                    <p><?php echo nl2br($hero_subtitle); ?></p>
-                                    <a href="<?php echo $hero_button_link; ?>"><?php echo $hero_button_text; ?></a>
+                                    <h1><?php echo esc_html($hero_title); ?></h1>
+                                    <p><?php echo nl2br(esc_html($hero_subtitle)); ?></p>
+                                    <a href="<?php echo esc_url($hero_button_link); ?>"><?php echo esc_html($hero_button_text); ?></a>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section class="services">
-                        <h2><?php _e('Services', 'wordev'); ?></h2>
+                        <h2><?php esc_html_e('Services', 'wordev'); ?></h2>
                         <div class="container">
                             <div class="services-item">
                                 <?php
@@ -49,7 +49,7 @@
                         </div>
                     </section>
                     <section class="home-blog">
-                        <h2><?php _e('Latest News', 'wordev'); ?></h2>
+                        <h2><?php esc_html_e('Latest News', 'wordev'); ?></h2>
                         <div class="container">
                             <?php
                                 $post_per_page    = get_theme_mod('set_per_page', 3);
@@ -59,12 +59,12 @@
                                 $args = array(
                                     'post_type'         => 'post',
                                     // Get Category ID: Design, Development and Network
-                                    'category__in'      => explode(',', $category_include),
+                                    'category__in'      => explode(',', esc_html($category_include)),
                                     // Get Category Slug: Design, Development and Network
                                     // 'category_name'     => array('design','development','network'),
                                     // Get Category ID: Uncategorized
-                                    'category__not_in'  => explode(',', $category_exclude),
-                                    'posts_per_page'    => $post_per_page
+                                    'category__not_in'  => explode(',', esc_html($category_exclude)),
+                                    'posts_per_page'    => esc_html($post_per_page)
                                 );
                                 $postlist = new WP_Query($args);
                                 if($postlist->have_posts()) : ?>
@@ -72,7 +72,7 @@
                                     <?php get_template_part('parts/content', 'latest-news'); ?>
                                 <?php endwhile; wp_reset_postdata();?>
                             <?php else : ?>
-                                <p><?php _e('No content available.', 'wordev'); ?></p>
+                                <p><?php esc_html_e('No content available.', 'wordev'); ?></p>
                             <?php endif; ?>
                         </div>
                     </section>

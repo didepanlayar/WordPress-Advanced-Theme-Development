@@ -14,7 +14,7 @@
                     <div class="logo">
                         <?php if(has_custom_logo()) : the_custom_logo(); ?>
                         <?php else : ?>
-                            <a href="<?php echo home_url('/'); ?>"><span><?php bloginfo('name'); ?></span></a>
+                            <a href="<?php echo esc_url(home_url('/')); ?>"><span><?php bloginfo('name'); ?></span></a>
                         <?php endif; ?>
                     </div>
                     <div class="searchbox">
