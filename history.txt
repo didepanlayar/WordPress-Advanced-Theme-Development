@@ -1,2 +1,6 @@
 Install Poedit Translation Editor
 - https://poedit.net
+
+Integration with Page Builder
+- Remove or rename page-home.php
+- Modify page.php (In this case I didn't want to implement it, so I just created page-builde.php)
