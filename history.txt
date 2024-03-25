@@ -4,3 +4,8 @@ Install Poedit Translation Editor
 Integration with Page Builder
 - Remove or rename page-home.php
 - Modify page.php (In this case I didn't want to implement it, so I just created page-builde.php)
+
+Get Block Type
+- Open Developer Tools (Browser)
+- Type on Console 'wp.blocks.getBlockTypes()'
+- Example types is 'core/quote'

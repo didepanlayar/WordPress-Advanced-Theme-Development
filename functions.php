@@ -51,8 +51,24 @@ function wordev_config() {
     add_theme_support('responsive-embeds');
     add_theme_support('editor-styles');
     add_editor_style('style-editor.css');
+    add_theme_support('wp-block-styles');
 }
 add_action('after_setup_theme', 'wordev_config', 0);
+
+function wordev_register_block_styles() {
+    wp_register_style('wordev-block-style', get_template_directory_uri() . '/style-block.css');
+    register_block_style(
+        'core/quote',
+        array(
+            'name'          => 'red-quote',
+            'label'         => 'Red Quote',
+            'is_default'    => true,
+            // 'inline_style'  => '.wp-block-quote.is-style-red-quote {border-left: 7px solid #FF0000; background: #F9F3F3; padding: 10px 20px}',
+            'style_handle'  => 'wordev-block-style'
+        )
+    );
+}
+add_action('init', 'wordev_register_block_styles');
 
 function wordev_sidebars() {
     register_sidebar(
