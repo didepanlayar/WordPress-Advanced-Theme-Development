@@ -52,6 +52,19 @@ function wordev_config() {
     add_theme_support('editor-styles');
     add_editor_style('style-editor.css');
     add_theme_support('wp-block-styles');
+    add_theme_support('editor-color-palette', array(
+        array(
+            'name'  => __('Primary', 'wordev'),
+            'slug'  => 'primary',
+            'color' => '#001E32'
+        ),
+        array(
+            'name'  => __('Secondary', 'wordev'),
+            'slug'  => 'secondary',
+            'color' => '#CFAF07'
+        )
+    ));
+    add_theme_support('disable-custom-colors');
 }
 add_action('after_setup_theme', 'wordev_config', 0);
 

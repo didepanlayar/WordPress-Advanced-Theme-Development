@@ -1295,3 +1295,19 @@ a img.aligncenter {
 .site-content {
     overflow: hidden;
 }
+
+.has-primary-background-color {
+    background-color: var(--wordev-black-blue);
+}
+
+.has-primary-color {
+    color: var(--wordev-black-blue);
+}
+
+.has-secondary-background-color {
+    background-color: var(--wordev-yellow);
+}
+
+.has-secondary-color {
+    color: var(--wordev-yellow);
+}
